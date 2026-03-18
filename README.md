@@ -420,3 +420,12 @@ Remember to replace placeholder values (like YOUR_EXTENSION_ID, YOUR-CLIENT-ID, 
 If you found this guide helpful please give us a star and follow us on Dev.to for more guides
 [Dev.to](https://dev.to/lvn1)
 
+Additonal details:
+
+in manifest.json
+   content_security_policy must also have "app hosting url" for connect-src and frame-src both
+   host permissions also need app hosting url
+
+in background.js
+   following is added to chrome.runtime.onMessage.addListener method
+       if (message.target === 'offscreen') return false;
