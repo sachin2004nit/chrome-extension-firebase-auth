@@ -429,3 +429,8 @@ in manifest.json
 in background.js
    following is added to chrome.runtime.onMessage.addListener method
        if (message.target === 'offscreen') return false;
+
+in signInWithPopup.js
+   complete urls are needed 
+   import { initializeApp } from 'https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js';
+    import { getAuth, signInWithPopup, GoogleAuthProvider } from 'https://www.gstatic.com/firebasejs/12.10.0/firebase-auth.js';
